@@ -1,0 +1,5 @@
+com.sarveshparab.plagiarismdetector.commandlinehandler
+com.sarveshparab.plagiarismdetector.exceptions
+com.sarveshparab.plagiarismdetector.filehandler
+com.sarveshparab.plagiarismdetector.main
+com.sarveshparab.plagiarismdetector.util
