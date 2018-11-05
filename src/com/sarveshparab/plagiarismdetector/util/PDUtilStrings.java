@@ -1,5 +1,10 @@
 package com.sarveshparab.plagiarismdetector.util;
 
+/**
+ * @author Sarvesh Parab [www.sarveshparab.com]
+ *
+ * Simple class tp hold all the static strings
+ */
 public class PDUtilStrings {
 
     public static final String FILE_1 = "file1";

@@ -12,10 +12,21 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * @author Sarvesh Parab [www.sarveshparab.com]
+ *
+ * This class handles file reading operations
+ */
 public class FileReader {
 
     private final static Logger LOGGER = Logger.getLogger(FileReader.class.getName());
 
+    /**
+     * This method reads contents of the file line by line
+     * Throws PDException if any error in reading file
+     * @param fileName The filename / filepath to read from
+     * @return A List of strings of lines from the file
+     */
     public List<String> readFromFile(String fileName){
 
         LOGGER.info("Reading input from file : " + fileName);

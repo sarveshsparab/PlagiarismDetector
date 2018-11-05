@@ -5,8 +5,18 @@ import com.sarveshparab.plagiarismdetector.exceptions.PDException;
 
 import java.util.Map;
 
+/**
+ * @author Sarvesh Parab [www.sarveshparab.com]
+ *
+ * This class helps to validate the input from the command line
+ */
 public class Validator {
 
+    /**
+     * The command line input validation
+     * @param argsMap The supplied arguments map
+     * @return True if input supplied arguments are valid or all provided
+     */
     public static boolean validateCmdInput(Map<String, String> argsMap){
         if (!argsMap.containsKey(PDUtilStrings.FILE_1))
             throw new PDException("Input file 1 unavailable", ErrorCode.FILE_1_UNAVAILABLE);
@@ -20,6 +30,11 @@ public class Validator {
         return true;
     }
 
+    /**
+     * Tuple size validation
+     * @param argsMap The supplied arguments map
+     * @return True if the tuple size is a valid integer
+     */
     public static boolean validateTupleSize(Map<String, String> argsMap) {
         if (argsMap.containsKey(PDUtilStrings.TUPLE_SIZE)) {
             if (!validateInteger(argsMap.get(PDUtilStrings.TUPLE_SIZE).trim()))
@@ -29,6 +44,11 @@ public class Validator {
         return false;
     }
 
+    /**
+     * Helper function to check of the input string is a valid integer
+     * @param intStr Input integer as string
+     * @return True if input string is valid integer
+     */
     private static boolean validateInteger(String intStr){
         try {
             Integer.parseInt(intStr);
