@@ -4,7 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum ErrorCode {
-    INPUT_FILE_READING_ERROR(1);
+    INPUT_FILE_READING_ERROR(1),
+    FILE_1_UNAVAILABLE(2),
+    FILE_2_UNAVAILABLE(3),
+    SYNONYM_FILE_UNAVAILABLE(4),
+    TUPLE_SIZE_UNAVAILABLE(5),
+    TUPLE_SIZE_INVALID(6);
 
     private int errorCode;
     private static Map<Integer, ErrorCode> errorCodeMeanings = new HashMap<>();
