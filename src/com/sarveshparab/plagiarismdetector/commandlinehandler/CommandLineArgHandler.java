@@ -14,10 +14,6 @@ public class CommandLineArgHandler {
 
     private Map<String, String> argsMap = new HashMap<>();
 
-    CommandLineArgHandler(){
-
-    }
-
     public void interpretArgs(String[] args){
         for(int a = 0; a < args.length ; a = a + 2){
             String arg = args[a].trim().toLowerCase();
