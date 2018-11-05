@@ -8,12 +8,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class FileReader {
 
+    private final static Logger LOGGER = Logger.getLogger(FileReader.class.getName());
+
     public List<String> readFromFile(String fileName){
+
+        LOGGER.info("Reading input from file : " + fileName);
+
         Path path = Paths.get(fileName);
         List<String> fileLines;
 
