@@ -1,5 +1,8 @@
 package com.sarveshparab.plagiarismdetector.filehandler;
 
+import com.sarveshparab.plagiarismdetector.exceptions.ErrorCode;
+import com.sarveshparab.plagiarismdetector.exceptions.PDException;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,6 +23,7 @@ public class FileReader {
                     .map(fs -> fs.trim().toLowerCase())
                     .collect(Collectors.toList());
         } catch (IOException e) {
+            throw new PDException(e.getMessage(), e.getCause(), ErrorCode.INPUT_FILE_READING_ERROR);
         }
 
         return fileLines;
