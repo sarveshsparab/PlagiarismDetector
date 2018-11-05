@@ -19,7 +19,7 @@ public class PDMain {
 
         PDEngine engine = new PDEngine();
 
-        float plagiarismPercent = engine.detect(pdp);
+        double plagiarismPercent = engine.detect(pdp);
 
         System.out.println("\n================= Plagiarism Percentage =================");
         System.out.println(plagiarismPercent+"%");
